@@ -1,0 +1,16 @@
+# emacs backup
+*~
+# temp files
+temp*
+# dev (development) versions
+dev*
+# old files and directories
+old*
+# test files
+test*
+upload*
+dbg_apidev.txt
+# python compile files
+*.pyc
+__pycache__
+
