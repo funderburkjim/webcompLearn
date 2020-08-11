@@ -1,0 +1,22 @@
+<!DOCTYPE html> <!-- html5 -->
+<html>
+<head>
+<META charset="UTF-8">
+<title>wc-blink</title>
+<script type="module" src="wc-blink-index.js"></script>
+
+</head>
+<body>
+<h2>wc-blink example</h2>
+<a href="https://www.webcomponents.org/element/@vanillawc/wc-blink">wc-blink</a>
+<wc-blink>
+This text will blink obnoxiously
+</wc-blink>
+
+<wc-blink style="color:red;">
+And so will this!
+</wc-blink>
+
+</body>
+</html>
+

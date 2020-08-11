@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    
+    <title>LitElement csl-getword 03</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto;
+
+}
+.grid-item {
+ width:450px;
+ padding: 10px;
+  /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+}
+
+</style>
+  </head>
+
+  <body>
+   <my-app servercode="xampp" dict="ben"
+     height="500px" style="position:absolute; width:430px;"
+   > </my-app> 
+   
+<script>
+/*
+   <my-app class="grid-item" servercode="xampp" dict="ben"
+    key="deva" height="500px" style="position:absolute; width:420px;"
+   > </my-app> 
+*/
+/*
+  <div style="display:inline-block">
+    <div class="grid-container" >
+   <my-app class="grid-item" servercode="xampp" dict="ben"
+    key="deva" height="500px" style="width:400px;"
+   > </my-app>  <!-- or dict="ben". default="mw" -->
+   </div>
+  </div>
+*/
+ </script>
+  <script type="module" src="./my-app.js"></script>
+  </body>
+
+</html>

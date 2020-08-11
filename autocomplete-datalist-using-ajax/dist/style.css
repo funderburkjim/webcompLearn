@@ -1,0 +1,39 @@
+/* using normalize.css in settings */
+body {
+  background: #c9c9f5;
+  box-sizing: border-box;
+  font: 1.1rem  "Open Sans", sans-serif;
+}
+body * {
+  box-sizing: inherit;
+  font: inherit;
+}
+.wrapper {
+  width: 600px;
+  margin: 20px auto;
+}
+.lblTitle {
+  display: block;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+#lblSel {
+  margin-left: 5px;
+}
+p {
+  font-size: 0.875em;
+  margin-top: 80px;
+}
+input[list="lang"] {
+  padding: 5px;
+  width: 12.5em;
+  border: 1px solid #aaa;
+  background: #eee;
+}
+select[name="lang_sel"] {
+  /* for Safari iOS */
+  width: 12.5em;
+  margin: 0;
+  margin-left: -12.5em;
+}

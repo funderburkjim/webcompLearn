@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<META charset="UTF-8">
+<title>Lit datalist01</title>
+
+
+</head>
+<body>
+<h2>lit-datalist01 example</h2>
+
+<div>
+<p> Uses ajax to fill an auto-complete element for html element names.
+ <br/>
+ <a href="https://jsfiddle.net/jeremykenedy/nfnc5ogh/">jsfiddle example</a>
+ <br/>
+ <a href="https://codepen.io/jrio/pen/dNKLMR">codepen example</a>
+ </p>
+ <div style="display:flex;">
+  <div style="margin-right:20px;">
+   <p id="result1"></p>
+   <my-element id="e1" ></my-element>
+  </div>
+  <div>
+   <p id="result2"></p>
+   <my-element id="e2" ></my-element>
+  </div>
+ </div>
+
+<script type="module" src="my-element.js"></script>
+<script>
+ for(let i=1;i<=2;i++) {
+  let elt1 = document.getElementById("e"+i);
+  elt1.addEventListener('new-key',(e) => {
+   let elt1r = document.getElementById("result"+i);
+   let val = e.detail.input;
+   elt1r.textContent = `The key is ${val}`;
+  });
+  /* this listener is never called
+  elt1.addEventListener('change',(e) => {
+   //let elt1r = document.getElementById("result"+i);
+   let val = e.detail.input;
+   //elt1r.textContent = `The key is ${val}`;
+   console.log(val,'change event on ',elt1);
+  });
+  */
+ }
+</script>
+</body>
+</html>

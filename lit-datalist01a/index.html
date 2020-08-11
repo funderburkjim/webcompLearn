@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<META charset="UTF-8">
+<title>lit-datalist01a</title>
+
+
+</head>
+<body>
+<h2>lit-datalist01a</h2>
+
+<div>
+<p> Search field for Sanskrit words. (getsuggest.php)
+ <br/>
+ <a href="https://jsfiddle.net/jeremykenedy/nfnc5ogh/">jsfiddle example</a>
+ <br/>
+ <a href="https://codepen.io/jrio/pen/dNKLMR">codepen example</a>
+ </p>
+ <div style="display:flex;">
+  <div style="margin-right:20px;">
+   <p id="result1"></p>
+   <csl-citation id="e1" ></csl-citation>
+  </div>
+<!--
+  <div>
+   <p id="result2"></p>
+   <csl-citation id="e2" ></csl-citation>
+  </div>
+-->
+ </div>
+
+<script type="module" src="csl-citation.js"></script>
+<script>
+ for(let i=1;i<=1;i++) {
+  let elt1 = document.getElementById("e"+i);
+  elt1.addEventListener('new-key',(e) => {
+   let elt1r = document.getElementById("result"+i);
+   let val = e.detail.input;
+   elt1r.textContent = `The key is ${val}`;
+  });
+  /* this listener is never called
+  elt1.addEventListener('change',(e) => {
+   //let elt1r = document.getElementById("result"+i);
+   let val = e.detail.input;
+   //elt1r.textContent = `The key is ${val}`;
+   console.log(val,'change event on ',elt1);
+  });
+  */
+ }
+</script>
+</body>
+</html>

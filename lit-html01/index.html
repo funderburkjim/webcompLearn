@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<META charset="UTF-8">
+<title>lit-html01</title>
+<script type="module">
+import {html, render} from 'https://unpkg.com/lit-html?module';
+//https://cdn.jsdelivr.net/npm/lit-element@2.3.1/lit-element.min.js
+// Define a template
+var myTemplate = (name) => html`<p>Hello ${name}</p>`;
+
+// Render the template to the document
+
+render(myTemplate('World'), document.body);
+</script>
+
+</head>
+<body>
+<h2>lit-html01 example</h2>
+
+<p> This is not a web component. 
+   Javascript simply renders a component.
+</p>

@@ -1,0 +1,11 @@
+
+* 07-17-2020  Ref: https://github.com/devpunks/snuggsi#readme
+   This not found useful.
+* 07-18-2020  wc-blink
+https://github.com/vanillawc/wc-blink
+
+<script type="module" src="https://cdn.jsdelivr.net/gh/vanillawc/wc-blink/index.js"></script>
+* lit-html01 get started 
+https://lit-html.polymer-project.org/guide/getting-started
+* lit-element-0.2.1.js
+From https://github.com/webfolderio/lit4browser/

@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    
+    <title>LitElement getword 05</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto;
+}
+.grid-item {
+ width:400px;
+ (padding: 10px;
+}
+
+</style>
+<style>
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+  flex-direction: column;
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="../fonts.css">
+
+  </head>
+  <body>
+  <div class="flex-container">
+   <div>
+  <!-- <button onclick="myFunction()">Click me</button> -->
+  <!-- <button onclick="myFunction()" >Reach</button> -->
+  <button onclick="reach()" >Reach</button>
+    <p id="demo" style="padding-left:10px; display:inline-block;"></p>
+   </div>
+
+   <div>
+    <my-app1 input="HK" style="position:absolute; top:60px;"></my-app1>
+   </div>
+  </div>
+  <script>
+   function reach() {
+    console.log('reach');
+    let app = document.querySelector('my-app1');
+    console.log('reach: app=',app);
+    let selt = app.shadowRoot.querySelector('csl-input');
+    console.log('shadow elt=',selt);
+    let input = selt.input;
+    console.log('input property value=',input);
+    let inputattr=selt.getAttribute('input');
+    console.log('input attribute=',input);
+
+    // style attribute of my-app1
+    let style = app.getAttribute("style");
+    console.log('my-app1 style attribute=',style);
+   }
+  </script>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+  console.log('myFunction');
+}
+</script>
+
+  <script type="module" src="./my-app1.js"></script>
+  
+  </body>
+
+</html>

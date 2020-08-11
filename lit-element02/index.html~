@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<META charset="UTF-8">
+<title>Adam Bar Demo 1</title>
+
+<style>
+ .soon {color:green;}
+</style>
+</head>
+<body>
+<h2>lit-element02 example</h2>
+
+<div>
+<p> This is a web component illustrating css tag from LitElement
+ <a href="https://lit-element.polymer-project.org/try/style">lit-element
+ </a>
+</p>
+ <my-element ></my-element>
+</div>
+<script type="module" src="index.js"></script>
+</body>
+</html>
