@@ -21,6 +21,14 @@ and events require a lot more 'boilerplate' complexity.
   This has nothing directly to do with web components.
   * There is a file 'getlang.php' which probably could be used to get
     the list of html elements; of course this would require a php server.
+* [lithtml-adam-bar](https://funderburkjim.github.io/webcompLearn/lithtml-adam-bar/)  Implements examples from [Adam Bar's video](https://www.youtube.com/watch?v=eSILtbWYrNc).  The video is a good intro to the lit-html library.
+  The code does not deal with web-components. The lit-element
+  JS library does facilitate web-component construction, and lit-element
+  makes use of lit-html.  Most of the following examples use the
+  lit-element and lit-html libraries.
+  The code uses lit-html from the unpkg content delivery network.
+* [lit-html01](https://funderburkjim.github.io/webcompLearn/lit-html01/)
+  This is basically the very first demo from the Adam Bar video.
 
 * 07-17-2020  Ref: https://github.com/devpunks/snuggsi#readme
    This not found useful.
