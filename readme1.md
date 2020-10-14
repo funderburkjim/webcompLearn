@@ -16,6 +16,11 @@ and events require a lot more 'boilerplate' complexity.
   a 'search' entry, which references a 'database' of country names.
   As each character is typed, the display shows names whose spelling
   starts with the string thus-far entered. 
+* [datalist-with-ajax](https://funderburkjim.github.io/webcompLearn/datalist-with-ajax/) : Similar to search-form.  But uses a Javascript call to read
+  a list of elements from a file on some server.  
+  This has nothing directly to do with web components.
+  * There is a file 'getlang.php' which probably could be used to get
+    the list of html elements; of course this would require a php server.
 
 * 07-17-2020  Ref: https://github.com/devpunks/snuggsi#readme
    This not found useful.
