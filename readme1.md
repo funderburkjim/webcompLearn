@@ -27,26 +27,25 @@ and events require a lot more 'boilerplate' complexity.
   makes use of lit-html.  Most of the following examples use the
   lit-element and lit-html libraries.
   The code uses lit-html from the unpkg content delivery network.
-* [lit-html01](https://funderburkjim.github.io/webcompLearn/lit-html01/)
-  This is basically the very first demo from the Adam Bar video.
+  * I also referred to this [lit-html getting-started](https://lit-html.polymer-project.org/guide/getting-started) documentation.
+* lit-element.  All the subsequent examples use lit-element and lit-html
+  libraries.  I found it surprisingly hard to get these libraries on
+  my local machine, and ended up using my local copy of 
+  * lit-element-2.3.1.js
+    I THINK this was from the  https://github.com/webfolderio/lit4browser/
+    Somehow, this seems to combine lit-element.js and lit-html.js  
+    current clone in '../lit4browser'
+    - https://github.com/webfolderio/lit4browser/releases
+    Download link is: https://github.com/webfolderio/lit4browser/releases/download/2.3.1/lit-element-2.3.1.js
 
-* 07-17-2020  Ref: https://github.com/devpunks/snuggsi#readme
-   This not found useful.
-* 07-18-2020  wc-blink
-https://github.com/vanillawc/wc-blink
+* [lit-datalist01](https://funderburkjim.github.io/webcompLearn/lit-datalist01/)
+  is an early example of an input element with an ajax call for auto-suggestion;
+  The functionality is much like the search-form example above.
+  This also requires a php server, so doesn't run on GitHub.
+  Here we use both lit-element and lit-html. 
 
-<script type="module" src="https://cdn.jsdelivr.net/gh/vanillawc/wc-blink/index.js"></script>
-* lit-html01 get started 
-https://lit-html.polymer-project.org/guide/getting-started
-* lit-element-0.2.1.js
-From https://github.com/webfolderio/lit4browser/
-* lit-element-2.3.1.js
-I THINK this was from the  https://github.com/webfolderio/lit4browser/
-Somehow, this seems to combine lit-element.js and lit-html.js  
-current clone in '../lit4browser'
- - https://github.com/webfolderio/lit4browser/releases
- 
-Download link is: https://github.com/webfolderio/lit4browser/releases/download/2.3.1/lit-element-2.3.1.js
+
+
 * lit-element-2.4.js
  10-8-2020  There is now a newer release.
 
