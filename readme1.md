@@ -1,4 +1,22 @@
 
+This repository contains many examples of web components.  A few are
+implementations of components published elsewhere.  But most are 
+components developed to emulate all or part of the displays for the
+Cologne Sanskrit Lexicon.
+
+This document is a guide to the applications appearing in the various
+subfolders.  The applications are listed in the order they were developed.
+
+* [wc-blink](https://funderburkjim.github.io/webcompLearn/wc-blink/index.html) This uses only ES6 Javascript to create a very simple component.  It is
+good to see this once.  But components that need attributes, properties,
+and events require a lot more 'boilerplate' complexity.
+
+* search-form :  This is a php application, so does not run on Github.
+  It has nothing to do with web components.  It shows a php program with
+  a 'search' entry, which references a 'database' of country names.
+  As each character is typed, the display shows names whose spelling
+  starts with the string thus-far entered. 
+
 * 07-17-2020  Ref: https://github.com/devpunks/snuggsi#readme
    This not found useful.
 * 07-18-2020  wc-blink
