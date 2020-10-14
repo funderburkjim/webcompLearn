@@ -35,7 +35,7 @@ and events require a lot more 'boilerplate' complexity.
     I THINK this was from the  https://github.com/webfolderio/lit4browser/
     Somehow, this seems to combine lit-element.js and lit-html.js  
     current clone in '../lit4browser'
-    - https://github.com/webfolderio/lit4browser/releases
+    https://github.com/webfolderio/lit4browser/releases
     Download link is: https://github.com/webfolderio/lit4browser/releases/download/2.3.1/lit-element-2.3.1.js
 
 * [lit-datalist01](https://funderburkjim.github.io/webcompLearn/lit-datalist01/)
