@@ -1,17 +1,8 @@
 import { html, css, LitElement } from '../lit-element-2.3.1.js';
-
+/* Ref: https://stackoverflow.com/questions/56301613/how-to-do-ajax-callback-in-javascript
+*/
 class FetchLit extends LitElement {
-  const oldcss = `
-      :host {
-        display: block;
-        padding: 5px;
-  `;
-  const newcss = `
-   div {color:red;}
-  `;
   static get styles() {
-    console.log("css=",css`${newcss}`);
-    //return css`${newcss}`;
     return css`
      * {color:red;}
     `;
@@ -38,7 +29,10 @@ class FetchLit extends LitElement {
   async firstUpdated() {
     await fetch(`https://demo.vaadin.com/demo-data/1.0/people?count=10`)
       .then(r => r.json())
-      .then(async data => {
+// Not sure why stackoverflow has 'async'
+// It seems to work without.
+//      .then(async data => {   
+      .then(data => {
         this.users = data.result;
       });
   }

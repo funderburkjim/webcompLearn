@@ -7,10 +7,10 @@ Cologne Sanskrit Lexicon.
 This document is a guide to the applications appearing in the various
 subfolders.  The applications are listed in the order they were developed.
 
+## No web components
 * [wc-blink](https://funderburkjim.github.io/webcompLearn/wc-blink/index.html) This uses only ES6 Javascript to create a very simple component.  It is
 good to see this once.  But components that need attributes, properties,
 and events require a lot more 'boilerplate' complexity.
-
 * search-form :  This is a php application, so does not run on Github.
   It has nothing to do with web components.  It shows a php program with
   a 'search' entry, which references a 'database' of country names.
@@ -21,6 +21,8 @@ and events require a lot more 'boilerplate' complexity.
   This has nothing directly to do with web components.
   * There is a file 'getlang.php' which probably could be used to get
     the list of html elements; of course this would require a php server.
+
+## No web components, but lit-html
 * [lithtml-adam-bar](https://funderburkjim.github.io/webcompLearn/lithtml-adam-bar/)  Implements examples from [Adam Bar's video](https://www.youtube.com/watch?v=eSILtbWYrNc).  The video is a good intro to the lit-html library.
   The code does not deal with web-components. The lit-element
   JS library does facilitate web-component construction, and lit-element
@@ -28,25 +30,26 @@ and events require a lot more 'boilerplate' complexity.
   lit-element and lit-html libraries.
   The code uses lit-html from the unpkg content delivery network.
   * I also referred to this [lit-html getting-started](https://lit-html.polymer-project.org/guide/getting-started) documentation.
+
+## lit-element web components
 * lit-element.  All the subsequent examples use lit-element and lit-html
   libraries.  I found it surprisingly hard to get these libraries on
   my local machine, and ended up using my local copy of 
   * lit-element-2.3.1.js
-    I THINK this was from the  https://github.com/webfolderio/lit4browser/
-    Somehow, this seems to combine lit-element.js and lit-html.js  
-    current clone in '../lit4browser'
+    Thia ia from the  https://github.com/webfolderio/lit4browser/ repository.
+    Somehow, this combines lit-element.js and lit-html.js.
+    The download links for all versions are in the author's *releases* directory
     https://github.com/webfolderio/lit4browser/releases
-    Download link is: https://github.com/webfolderio/lit4browser/releases/download/2.3.1/lit-element-2.3.1.js
+  * Download link is: https://github.com/webfolderio/lit4browser/releases/download/2.3.1/lit-element-2.3.1.js
+  * There is a newer release lit-element-2.4.js as of 10-8-2020.
+  * The (non-minified?) size is about 160k.
+
 
 * [lit-datalist01](https://funderburkjim.github.io/webcompLearn/lit-datalist01/)
   is an early example of an input element with an ajax call for auto-suggestion;
   The functionality is much like the search-form example above.
   This also requires a php server, so doesn't run on GitHub.
   Here we use both lit-element and lit-html. 
-
-
-
-* lit-element-2.4.js
- 10-8-2020  There is now a newer release.
-
-* In the examples
+* [lit-fetch02](https://funderburkjim.github.io/webcompLearn/lit-fetch02/) :
+  stackoverflow example of a web component that fetches data, then
+  displays the data. 
