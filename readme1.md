@@ -50,6 +50,9 @@ and events require a lot more 'boilerplate' complexity.
   The functionality is much like the search-form example above.
   This also requires a php server, so doesn't run on GitHub.
   Here we use both lit-element and lit-html. 
+* [lit-fetch01](https://funderburkjim.github.io/webcompLearn/lit-fetch01/) :
+  minimalist my-fetch element using fetch and the lit-html 'until' function.
+  The data is in a local text file.
 * [lit-fetch02](https://funderburkjim.github.io/webcompLearn/lit-fetch02/) :
   stackoverflow example of a web component that fetches data, then
   displays the data. Depends on a data set at vaadin.
@@ -59,5 +62,4 @@ and events require a lot more 'boilerplate' complexity.
   * passing attribute vlue to custom element.
 * [lit-element03](https://funderburkjim.github.io/webcompLearn/lit-element03/) :  Shows how one custom element can be composed from one or more other
   custome elements.
-
 * [lit-datalist01a](https://funderburkjim.github.io/webcompLearn/lit-datalist01a/) : 
