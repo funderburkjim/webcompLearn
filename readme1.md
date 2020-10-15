@@ -52,4 +52,5 @@ and events require a lot more 'boilerplate' complexity.
   Here we use both lit-element and lit-html. 
 * [lit-fetch02](https://funderburkjim.github.io/webcompLearn/lit-fetch02/) :
   stackoverflow example of a web component that fetches data, then
-  displays the data. 
+  displays the data. Depends on a data set at vaadin.
+* [lit-datalist01a](https://funderburkjim.github.io/webcompLearn/lit-datalist01a/) : 

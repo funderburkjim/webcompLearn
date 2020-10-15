@@ -139,10 +139,10 @@ select[name="lang_sel"] {
 //      @keyup=${this.onKeyupF}
 //@mouseup="${(e) => this.handleEvent(e)}"
 // Attaching this to the <option> element has no effect
-// While it does as expected with attached to <input> element.
+// While it does as expected when attached to <input> element.
     return html`
     <div>
-    <input name="cod" id="cod" list="lang" autofocus autocomplete="off" aria-autocomplete="list" placeholder="Enter html element" 
+    <input name="cod" id="cod" list="lang" autofocus autocomplete="off" aria-autocomplete="list" placeholder="Enter 2 or more characters of slp1" 
      @keyup=${this.onKeyupF}
      />
     <datalist id="lang">

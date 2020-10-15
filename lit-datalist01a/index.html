@@ -10,7 +10,7 @@
 <h2>lit-datalist01a</h2>
 
 <div>
-<p> Search field for Sanskrit words. (getsuggest.php)
+<p> Search field for Sanskrit words. 
  <br/>
  <a href="https://jsfiddle.net/jeremykenedy/nfnc5ogh/">jsfiddle example</a>
  <br/>
@@ -21,22 +21,25 @@
    <p id="result1"></p>
    <csl-citation id="e1" ></csl-citation>
   </div>
-<!--
-  <div>
-   <p id="result2"></p>
-   <csl-citation id="e2" ></csl-citation>
-  </div>
--->
+
  </div>
 
 <script type="module" src="csl-citation.js"></script>
 <script>
- for(let i=1;i<=1;i++) {
+ let ncitation = 1;  
+ for(let i=1;i<=ncitation;i++) {
+  // Assumes there are n csl-citation elements,
+  // with ids e1,e2, ... 
+  // Add 'new-key' event listener for each of them.
   let elt1 = document.getElementById("e"+i);
   elt1.addEventListener('new-key',(e) => {
    let elt1r = document.getElementById("result"+i);
    let val = e.detail.input;
-   elt1r.textContent = `The key is ${val}`;
+   if (val == "") {
+    elt1r.textContent = '';
+   } else {
+    elt1r.textContent = `The key is ${val}`;
+   }
   });
   /* this listener is never called
   elt1.addEventListener('change',(e) => {
