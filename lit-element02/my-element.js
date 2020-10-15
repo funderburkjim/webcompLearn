@@ -1,12 +1,4 @@
-// next fails
-//import {LitElement} from "https://cdn.jsdelivr.net/npm/lit-element@2.3.1/lit-element.min.js";
-//next does not fail
-import {LitElement, html, css} from "https://cdn.pika.dev/lit-element";
-// next does not fail
-// Ref: https://github.com/Polymer/lit-element/issues/603#issuecomment-565859359
-//import {LitElement, html} from 'https://unpkg.com/lit-element?module';
-
-// TODO: Import the css helper function
+import {LitElement, html, css} from '../lit-element-2.3.1.js';
 
 class MyElement extends LitElement {
   static get properties() {

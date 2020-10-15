@@ -78,7 +78,8 @@ select[name="lang_sel"] {
 
   async onKeyupF (event) {
     //event.preventDefault();
-    let value = event.target.value;
+    // what the user has typed so far
+    let value = event.target.value;  
     this.value=value;
     //console.log('onKeyupF: new value =',value);
     if (value == '') {
@@ -122,14 +123,14 @@ select[name="lang_sel"] {
 
 
   urlbaseF() {
-  console.log('csl-getword02. urlbaseF. servercode=',this.servercode);
+  //console.log('csl-getword02. urlbaseF. servercode=',this.servercode);
   if (this.servercode == 'cologne') {
    return `https://sanskrit-lexicon.uni-koeln.de/scans`;
   }
   if (this.servercode == 'xampp') {
    return `http://localhost/cologne`;
   }
-  console.log(`urlbaseF: unknown servercode =  ${this.servercode} `);
+  //console.log(`urlbaseF: unknown servercode =  ${this.servercode} `);
   return `https://sanskrit-lexicon.uni-koeln.de/scans`;
 
  }
@@ -138,7 +139,7 @@ select[name="lang_sel"] {
   render() {
 //      @keyup=${this.onKeyupF}
 //@mouseup="${(e) => this.handleEvent(e)}"
-// Attaching this to the <option> element has no effect
+// Attaching this to the <option> element has no effect. Why?
 // While it does as expected when attached to <input> element.
     return html`
     <div>

@@ -53,4 +53,8 @@ and events require a lot more 'boilerplate' complexity.
 * [lit-fetch02](https://funderburkjim.github.io/webcompLearn/lit-fetch02/) :
   stackoverflow example of a web component that fetches data, then
   displays the data. Depends on a data set at vaadin.
+* [lit-element02](https://funderburkjim.github.io/webcompLearn/lit-element02/) :  Implements example from [polymer project documentation](https://lit-element.polymer-project.org/try/style).  Various things are illustrated:
+  * css in the shadow-dom.  
+  * default attribute values for custom element.
+  * passing attribute vlue to custom element.
 * [lit-datalist01a](https://funderburkjim.github.io/webcompLearn/lit-datalist01a/) : 
