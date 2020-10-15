@@ -57,4 +57,7 @@ and events require a lot more 'boilerplate' complexity.
   * css in the shadow-dom.  
   * default attribute values for custom element.
   * passing attribute vlue to custom element.
+* [lit-element03](https://funderburkjim.github.io/webcompLearn/lit-element03/) :  Shows how one custom element can be composed from one or more other
+  custome elements.
+
 * [lit-datalist01a](https://funderburkjim.github.io/webcompLearn/lit-datalist01a/) : 
