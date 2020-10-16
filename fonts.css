@@ -1,4 +1,7 @@
-/* The font faces used by csl-getword */
+/* The font faces used by csl-getword 
+  There are two possible choices.  First is a local installation.
+  If this is not available, then the cologne server location is used.
+*/
 
 @font-face { 
  src: url(http://localhost/cologne/csl-apidev/fonts/siddhanta.ttf),
