@@ -27,7 +27,9 @@ class FetchLit extends LitElement {
 
   // Don't use connectedCallback() since it can't be async
   async firstUpdated() {
-    await fetch(`https://demo.vaadin.com/demo-data/1.0/people?count=10`)
+    let url=`https://demo.vaadin.com/demo-data/1.0/people?count=10`;
+    url = './vaadin_users.json';
+    await fetch(url)
       .then(r => r.json())
 // Not sure why stackoverflow has 'async'
 // It seems to work without.
