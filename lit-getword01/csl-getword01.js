@@ -15,6 +15,8 @@ class cslGetword01 extends LitElement {
     return {
       dict: { type: String },
       key:  { type: String },
+      input:  { type: String },
+      output:  { type: String },
       result: { type: String }
     };
   }
@@ -23,6 +25,8 @@ class cslGetword01 extends LitElement {
     super();
     this.dict = 'md';
     this.key  = 'guru';
+    this.input = 'slp1';
+    this.output = 'iast';
     this.result = 'working';
     this.done = false;
   }
@@ -43,12 +47,14 @@ class cslGetword01 extends LitElement {
 
     //const baseurl = 'https://sanskrit-lexicon.uni-koeln.de/scans/csl-apidev/getword.php';
   const baseurl = `${url_apidev}/getword.php`;
-    const url = `${baseurl}?dict=${this.dict}&key=${this.key}&dispopt=3`
-    console.log('firstUpdated. url=',url);
+    const url = `${baseurl}?dict=${this.dict}&key=${this.key}` +
+                 `&input=${this.input}&output=${this.output}` +
+                 `&dispopt=3`;   // not sure why dispopt=3 required
+    // console.log('firstUpdated. url=',url);
     await fetch(url)
       .then(r => r.text())
       .then(async data => {
-        console.log('firstUpdated result=',data);
+        //console.log('firstUpdated result=',data);
         this.result = data;
         this.done = true;
       });

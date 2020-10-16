@@ -55,11 +55,19 @@ and events require a lot more 'boilerplate' complexity.
   The data is in a local text file.
 * [lit-fetch02](https://funderburkjim.github.io/webcompLearn/lit-fetch02/) :
   stackoverflow example of a web component that fetches data, then
-  displays the data. Depends on a data set at vaadin.
+  displays the data. Revised to use a local json file for the data.
 * [lit-element02](https://funderburkjim.github.io/webcompLearn/lit-element02/) :  Implements example from [polymer project documentation](https://lit-element.polymer-project.org/try/style).  Various things are illustrated:
   * css in the shadow-dom.  
   * default attribute values for custom element.
   * passing attribute vlue to custom element.
 * [lit-element03](https://funderburkjim.github.io/webcompLearn/lit-element03/) :  Shows how one custom element can be composed from one or more other
   custome elements.
+* [lit-getword01](https://funderburkjim.github.io/webcompLearn/lit-getword01/) :  Provides a custom element which implements the getword api by means of
+  attributes to the `<csl-getword>` element.  
+  * One weakness regards the base url from which the data is retrieved.
+    If this is run on the Cologne server, it works.
+    If run elsewhere, it tries to use a local *xampp*-type installation of
+    the Cologne dictionaries; specifically using the csl-apidev code.
+    Thus, the application will NOT work properly on the GitHub server.
+
 * [lit-datalist01a](https://funderburkjim.github.io/webcompLearn/lit-datalist01a/) : 
