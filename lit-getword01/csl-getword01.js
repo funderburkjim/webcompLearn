@@ -31,6 +31,8 @@ class cslGetword01 extends LitElement {
     this.done = false;
   }
   urlbaseF = function () {
+  // change to always uses Cologne server.
+  return `https://sanskrit-lexicon.uni-koeln.de/scans`;
   let origin = window.location.origin;  
   if (origin.indexOf("sanskrit-lexicon.uni-koeln.de") >= 0)  {
    return css`https://sanskrit-lexicon.uni-koeln.de/scans`;
@@ -41,16 +43,16 @@ class cslGetword01 extends LitElement {
  }
 
   // Don't use connectedCallback() since it can't be async
+  // Get the data when the element is created.
   async firstUpdated() {
   const urlbase = this.urlbaseF();
   const url_apidev = `${urlbase}/csl-apidev`;
-
     //const baseurl = 'https://sanskrit-lexicon.uni-koeln.de/scans/csl-apidev/getword.php';
   const baseurl = `${url_apidev}/getword.php`;
     const url = `${baseurl}?dict=${this.dict}&key=${this.key}` +
                  `&input=${this.input}&output=${this.output}` +
                  `&dispopt=3`;   // not sure why dispopt=3 required
-    // console.log('firstUpdated. url=',url);
+    console.log('firstUpdated. url=',url);
     await fetch(url)
       .then(r => r.text())
       .then(async data => {

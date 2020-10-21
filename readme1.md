@@ -52,25 +52,29 @@ and events require a lot more 'boilerplate' complexity.
   The functionality is much like the search-form example above.
   This also requires a php server, so doesn't run on GitHub.
   Here we use both lit-element and lit-html. 
+* [lit-datalist01a](https://funderburkjim.github.io/webcompLearn/lit-datalist01a/) : 
+  * Use the getsuggtion API at https://sanskrit-lexicon.uni-koeln.de/ to
+ get words starting with a certain spelling  (only handles SLP1 spelling).
+  * Uses HTML `datalist` element to show the list of suggestions.
+  * `<csl-citation>` web component does the work. 
+  * Create a custom event `new-key` so the 'parent' of csl-citation can
+    know what the user selected (via an 'enter keydown' event.
+
 * [lit-fetch01](https://funderburkjim.github.io/webcompLearn/lit-fetch01/) :
-  minimalist my-fetch element using fetch and the lit-html 'until' function.
+  minimalist my-fetch custom element using fetch and the lit-html 'until' function.
   The data is in a local text file.
 * [lit-fetch02](https://funderburkjim.github.io/webcompLearn/lit-fetch02/) :
-  stackoverflow example of a web component that fetches data, then
+  stackoverflow example of a web component `fetch-lit` that fetches data, then
   displays the data. Revised to use a local json file for the data.
 * [lit-element02](https://funderburkjim.github.io/webcompLearn/lit-element02/) :  Implements example from [polymer project documentation](https://lit-element.polymer-project.org/try/style).  Various things are illustrated:
   * css in the shadow-dom.  
   * default attribute values for custom element.
-  * passing attribute vlue to custom element.
+  * passing attribute value to custom element.
 * [lit-element03](https://funderburkjim.github.io/webcompLearn/lit-element03/) :  Shows how one custom element can be composed from one or more other
-  custome elements.
-* [lit-getword01](https://funderburkjim.github.io/webcompLearn/lit-getword01/) :  Provides a custom element which implements the getword api by means of
+  custom elements.
+* [lit-getword01](https://funderburkjim.github.io/webcompLearn/lit-getword01/) :  Provides a custom element which implements the getword api at
+  https://sanskrit-lexicon.uni-koeln.de/ by means of
   attributes to the `<csl-getword>` element.  
-  * One weakness regards the base url from which the data is retrieved.
-    If this is run on the Cologne server, it works.
-    If run elsewhere, it tries to use a local *xampp*-type installation of
-    the Cologne dictionaries; specifically using the csl-apidev code.
-    Thus, the application will NOT work properly on the GitHub server.
   * Uses shadow dom css; originally from 
     [basic.css from apidev](https://github.com/sanskrit-lexicon/csl-apidev/blob/master/css/basic.css).  
 * [lit-getword01a](https://funderburkjim.github.io/webcompLearn/lit-getword01a/) : adds additional 'serverID' attribute to the `<csl-getword>` custom element.
@@ -93,4 +97,3 @@ oldstandarditalic : same as above?
 charterindocapital: for 'ls' text in pwg
        Jul 18, 2015. font family for capitalization, only SNP 
 
-* [lit-datalist01a](https://funderburkjim.github.io/webcompLearn/lit-datalist01a/) : 
