@@ -103,4 +103,17 @@ and events require a lot more 'boilerplate' complexity.
   * oldstandarditalic : same as above?
   * charterindocapital: for 'ls' text in pwg
     font family for capitalization, only SNP 
-
+* [lit-getword02_v0](https://funderburkjim.github.io/webcompLearn/lit-getword02_v0/index.html) A `my-app` element, which combines elements `csl-citation` and `csl-getword`.
+  * The csl-citation element is built on the HTML 'input' element.
+    When the *Enter key* is pressed, the 'new-citation' custom event is created
+    with the appname.
+  * csl-citation also has an 'appname' attribute.  
+  * The my-app element has an event listener for the 'new-citation' event.
+    Each new my-app element constructs csl-citation with a new 'appname'
+  * When there are multiple instances of the 'my-app' element,  the
+    appname serves to coordinate the events.
+  *  [lit-getword02_v0 2 =](https://funderburkjim.github.io/webcompLearn/lit-getword02_v0/index2.html)  shows two instances of 'my-app'.
+  *  [lit-getword02_v0 3 =](https://funderburkjim.github.io/webcompLearn/lit-getword02_v0/index3.html)  shows three instances of 'my-app'.
+  * The my-app element requires a 'dict' attribute.
+  * When a my-app element detects a new citation, it uses `csl-getword`
+    element to fetch the data and render the html result from server.

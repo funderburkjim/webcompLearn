@@ -1,5 +1,4 @@
 import { html, css, LitElement,unsafeHTML } from '../lit-element-2.3.1.js';
-//import {getwordStyles} from './getword_styles.js';
 export {cslCitation};
 class cslCitation extends LitElement {
   static get styles() {
