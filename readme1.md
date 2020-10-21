@@ -30,7 +30,9 @@ and events require a lot more 'boilerplate' complexity.
   lit-element and lit-html libraries.
   The code uses lit-html from the unpkg content delivery network.
   * I also referred to this [lit-html getting-started](https://lit-html.polymer-project.org/guide/getting-started) documentation.
-
+* [lithtml-adam-bar1](https://funderburkjim.github.io/webcompLearn/lithtml-adam-bar1/) Same as above; but uses a local version of lit-html.js from https://github.com/aaronshaf/lit-html-bundle.
+  * This code is dated 2017.  How to create using latest stable release of
+    lit-html?
 ## lit-element web components
 * lit-element.  All the subsequent examples use lit-element and lit-html
   libraries.  I found it surprisingly hard to get these libraries on

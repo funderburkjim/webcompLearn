@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<META charset="UTF-8">
+<title>Adam Bar Demo 1</title>
+<script type="module">
+// lit-html.min.js from https://github.com/aaronshaf/lit-html-bundle
+//  This works, but is an old version of lit-html.
+// 
+import {html, render} from './lit-html.min.js';
+
+// Define a template
+var myTemplate = (name) => html`<p>Hello ${name}</p>`;
+
+// Render the template to the document
+let elt = document.querySelector('#example1');
+//render(myTemplate('World'), document.body);
+render(myTemplate('World'), elt);
+</script>
+
+<!-- adam bar demo1 -->
+<script type="module" src="./adam_bar_demo1.js"></script>
+<script type="module" src="./adam_bar_demo2.js"></script>
+<script type="module" src="./adam_bar_demo3.js"></script>
+<style>
+ .soon {color:green;}
+</style>
+</head>
+<body>
+<h2>lit-html01 example</h2>
+
+<div>
+<p> This is not a web component. 
+   Javascript simply renders a component.
+</p>
+<div id="example1"></div>
+</div>
+
+<div id="adam-bar-demo1"></div>
+<div id="adam-bar-demo2"></div>
+
+<div id="adam-bar-demo3"></div>
