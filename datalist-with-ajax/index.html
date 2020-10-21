@@ -86,6 +86,7 @@ request.onreadystatechange = function(response) {
   if (request.readyState === 4) {
     if (request.status === 200) {
       // Parse the JSON
+      console.log('responseText = ',request.responseText);
       var jsonOptions = JSON.parse(request.responseText);
 
       // Loop over the JSON array.
@@ -111,7 +112,10 @@ request.onreadystatechange = function(response) {
 input.placeholder = "Loading options...";
 
 // Set up and make the request.
-request.open('GET', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/4621/html-elements.json', true);
+//let url = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/4621/html-elements.json';  // from the original code
+let url = 'html-elements.json';
+
+request.open('GET', url, true);
 request.send();
 </script>
 </body>
