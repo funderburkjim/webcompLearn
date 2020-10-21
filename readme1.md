@@ -77,23 +77,30 @@ and events require a lot more 'boilerplate' complexity.
   attributes to the `<csl-getword>` element.  
   * Uses shadow dom css; originally from 
     [basic.css from apidev](https://github.com/sanskrit-lexicon/csl-apidev/blob/master/css/basic.css).  
+  * The css is loaded 'statically'  from the file getword_styles.js.
+    This means that the style is the same for all instances of the
+    `<csl-citation>` custom elements.
+  * getword_styles.js  specifiy custom web fonts for Devanagari.
+  * HOWEVER, these fonts are NOT loaded and used.  
 * [lit-getword01a](https://funderburkjim.github.io/webcompLearn/lit-getword01a/) : adds additional 'serverID' attribute to the `<csl-getword>` custom element.
  * Default value 'cologne' uses the csl-apidev api at the Cologne server for data and web fonts.
- * value 'xampp' uses a local installation of the csl-apidev api.
+ * value 'xampp' uses a local installation of the csl-apidev API.
  * Other values of serverID may be useful in the future.
  * It is a best practice to have the CSS to be static in the class.
+ * Suppose we have two
 * WEB FONT comment
   * font-faces are NOT loaded when these are in the shadow dom.
     Thus font-face statements must be in the regular ('light') dom.
   * Ref: https://medium.com/rate-engineering/winning-the-war-of-css-conflicts-through-the-shadow-dom-de6c797b5cba
-  * One solution (not-ideal) is to load a fonts.css file in the
+  * One solution is to load a fonts.css file in the
     head of index.html.  That is is the solution used here.
     This is not ideal because the custom element does not load the
     custom fonts.
- Web-font locations
-siddhanta : devanagari text
-oldstandard: for normal text in pwg
-oldstandarditalic : same as above?
-charterindocapital: for 'ls' text in pwg
-       Jul 18, 2015. font family for capitalization, only SNP 
+* Note regarding web-font uses. This is determined by the
+  basicdisplay.php program in csl-apidev at Cologne.
+  * siddhanta : devanagari text
+  * oldstandard: for normal text in pwg
+  * oldstandarditalic : same as above?
+  * charterindocapital: for 'ls' text in pwg
+    font family for capitalization, only SNP 
 

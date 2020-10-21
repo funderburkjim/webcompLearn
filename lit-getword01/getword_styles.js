@@ -2,6 +2,7 @@ import { css, unsafeCSS} from '../lit-element-2.3.1.js';
 /* Adaptaion of csl-apidev/css/basic.css. Almost identical.
 */
 const urlbaseF = function () {
+  return css`https://sanskrit-lexicon.uni-koeln.de/scans`;
   let origin = window.location.origin;  
   if (origin.indexOf("sanskrit-lexicon.uni-koeln.de") >= 0)  {
    return css`https://sanskrit-lexicon.uni-koeln.de/scans`;

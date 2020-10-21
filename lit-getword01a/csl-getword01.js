@@ -56,7 +56,7 @@ class cslGetword01 extends LitElement {
     const url = `${baseurl}?dict=${this.dict}&key=${this.key}` +
                  `&input=${this.input}&output=${this.output}` +
                  `&dispopt=3`;   // not sure why dispopt=3 required
-    // console.log('firstUpdated. url=',url);
+    console.log('firstUpdated. serverID=',this.serverID,'url=',url);
     await fetch(url)
       .then(r => r.text())
       .then(async data => {
