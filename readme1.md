@@ -135,8 +135,14 @@ fetches html from the server and renders it.
   but does NOT use the appname attribute.  Preferable to lit-getword03 since
   slightly simpler.
 * [lit-getword03a/index.html](https://funderburkjim.github.io/webcompLearn/lit-getword03a/index.html) and
-  [lit-getword03a/index2.html](https://funderburkjim.github.io/webcompLearn/lit-getword03a/index2.html) Functionally identical to lit-getword03. Slightly
-better UI because of styling of csl-dict
+  [lit-getword03a/index2.html](https://funderburkjim.github.io/webcompLearn/lit-getword03a/index2.html) Functionally similar to lit-getword03. 
+  * shorten dictionary names
+  * add 'height' attribute to my-app element.
+  * add some styling
   * [problem_child.html](https://funderburkjim.github.io/webcompLearn/lit-getword03a/problem_child.html)  Not related to web components.  For testing
   certain features of grid layout.
   * [problem_child1.html](https://funderburkjim.github.io/webcompLearn/lit-getword03a/problem_child1.html)  Test certain features of grid layout.
+* [lit-getword03a.1/index.html](https://funderburkjim.github.io/webcompLearn/lit-getword03a.1/index.html) Try to replace the 'height attribute' by
+  using the style attribute of 'my-app' instance(s).  For some reason,
+  this does NOT work as expected.
+
