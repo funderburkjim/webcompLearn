@@ -2,7 +2,7 @@
 <html>
   <head>
     
-    <title>test-csl-dict</title>
+    <title>LitElement csl-getword 03</title>
 <style>
 .grid-container {
   display: inline-grid;
@@ -21,8 +21,12 @@
   </head>
 
   <body>
-  <csl-dict></csl-dict>
-  <script type="module" src="./csl-dict.js"></script>
+  <div style="display:inline-block">
+    <div class="grid-container" >
+   <my-app class="grid-item" servercode="xampp" dict="ben"> </my-app>  <!-- or dict="ben". default="mw" -->
+   </div>
+  </div>
+  <script type="module" src="./my-app.js"></script>
   </body>
 
 </html>

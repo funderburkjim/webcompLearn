@@ -117,3 +117,26 @@ and events require a lot more 'boilerplate' complexity.
   * The my-app element requires a 'dict' attribute.
   * When a my-app element detects a new citation, it uses `csl-getword`
     element to fetch the data and render the html result from server.
+* [lit-getword02](https://funderburkjim.github.io/webcompLearn/lit-getword02/index.html) Almost identical to lit-getword02_v0. 
+* [lit-getword03](https://funderburkjim.github.io/webcompLearn/lit-getword03/index.html) Adds a dictionary selection element, `csl-dict`, to the `csl-citation` and `csl-getword` elements of lit-getword02.  The `my-app` element combines
+these three elements. Both csl-dict and csl-citation generate events when
+the user changes either. And my-app listens for such changes and is
+rendered.  The rendering of my-app causes a rendering of <csl-getword>, which
+fetches html from the server and renders it.
+  * my-app has an appname attribute; the constructor gives each instance a
+    new appname.
+  * It was felt that this needed to be passed to the csl-citation child
+    element and also be passed back by the csl-citation custom 'new-citation'
+    event and used by the my-app event handler for 'new-citation'.
+  * lit-getword03-1 does NOT use this appname, and seems to work fine.
+    See below.
+* [lit-getword03.1/index.html](https://funderburkjim.github.io/webcompLearn/lit-getword03.1/index.html) and
+  [lit-getword03.1/index2.html](https://funderburkjim.github.io/webcompLearn/lit-getword03.1/index2.html) Functionally identical to lit-getword03,
+  but does NOT use the appname attribute.  Preferable to lit-getword03 since
+  slightly simpler.
+* [lit-getword03a/index.html](https://funderburkjim.github.io/webcompLearn/lit-getword03a/index.html) and
+  [lit-getword03a/index2.html](https://funderburkjim.github.io/webcompLearn/lit-getword03a/index2.html) Functionally identical to lit-getword03. Slightly
+better UI because of styling of csl-dict
+  * [problem_child.html](https://funderburkjim.github.io/webcompLearn/lit-getword03a/problem_child.html)  Not related to web components.  For testing
+  certain features of grid layout.
+  * [problem_child1.html](https://funderburkjim.github.io/webcompLearn/lit-getword03a/problem_child1.html)  Test certain features of grid layout.
