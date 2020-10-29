@@ -29,17 +29,16 @@ class cslCitation extends LitElement {
     var new_event = new CustomEvent('new-citation',
      {detail: {key:this.key,appname:this.appname}
      });
-    this.dispatchEvent(new_event);  // this. is needed. Not sure why
+    this.dispatchEvent(new_event);  // this. is required  why?
   }
  }
   render() {
     return html`
  <div class="citationdiv">
-  <!-- citation:&nbsp; -->
   <input class="keyInput" type="text" name="key" size="20" value="${this.key}" 
    style="height:2.0em"
    placeholder="Search headword"
-   @keyup=${this.onReturnKey} /> 
+   @keyup=${this.onReturnKey} />
  </div>
  `;
  }

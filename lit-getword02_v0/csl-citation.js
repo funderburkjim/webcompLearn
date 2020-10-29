@@ -1,9 +1,8 @@
 import { html, css, LitElement,unsafeHTML } from '../lit-element-2.3.1.js';
-export {cslCitation};
+
 class cslCitation extends LitElement {
   static get styles() {
    return [
-    //getwordStyles
     css``
    ];
   }
@@ -26,10 +25,7 @@ class cslCitation extends LitElement {
   if (event.keyCode === 13) {
     // Cancel the default action, if needed
     event.preventDefault();
-    // Trigger the button element with a click
-    //document.getElementById("myBtn").click();
     this.key = event.target.value
-    console.log('csl-citation: appname=',this.appname,'You entered word ',this.key);
     var new_event = new CustomEvent('new-citation',
      {detail: {key:this.key,appname:this.appname}
      });
@@ -39,10 +35,10 @@ class cslCitation extends LitElement {
   render() {
     return html`
  <div class="citationdiv">
-  citation:&nbsp;
   <input class="keyInput" type="text" name="key" size="20" value="${this.key}" 
    style="height:2.0em"
-   @keyup=${this.onReturnKey} /> (appname=${this.appname})
+   placeholder="Search headword"
+   @keyup=${this.onReturnKey} />
  </div>
  `;
  }

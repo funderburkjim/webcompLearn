@@ -1,6 +1,6 @@
 import { html, css, LitElement,unsafeHTML } from '../lit-element-2.3.1.js';
 import {getwordStyles} from './getword_styles.js';
-export {cslGetword02};
+
 class cslGetword02 extends LitElement {
   static get styles() {
    return [
@@ -30,6 +30,7 @@ class cslGetword02 extends LitElement {
     this.done = false;
   }
   urlbaseF = function () {
+  return css`https://sanskrit-lexicon.uni-koeln.de/scans`;
   let origin = window.location.origin;  
   if (origin.indexOf("sanskrit-lexicon.uni-koeln.de") >= 0)  {
    return css`https://sanskrit-lexicon.uni-koeln.de/scans`;

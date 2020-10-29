@@ -87,7 +87,7 @@ and events require a lot more 'boilerplate' complexity.
  * value 'xampp' uses a local installation of the csl-apidev API.
  * Other values of serverID may be useful in the future.
  * It is a best practice to have the CSS to be static in the class.
- * Suppose we have two
+ 
 * WEB FONT comment
   * font-faces are NOT loaded when these are in the shadow dom.
     Thus font-face statements must be in the regular ('light') dom.
@@ -118,6 +118,18 @@ and events require a lot more 'boilerplate' complexity.
   * When a my-app element detects a new citation, it uses `csl-getword`
     element to fetch the data and render the html result from server.
 * [lit-getword02](https://funderburkjim.github.io/webcompLearn/lit-getword02/index.html) Almost identical to lit-getword02_v0. 
+  * modules csl-getword02, and getword_styles are same
+    in lit-getword02 and lit-getword02_v0.
+  * module csl-citation is different only in how the 'new-citation' event
+    is dispatched.  
+    * in lit-getword02_v0, *dispatchEvent(new_event)
+    * in lit-getword02, *this.dispatchEvent(new_event)*
+  * module my-app differs in how the 'new-citation' event handler is done
+    * in lit-getword02_v0, in constructor 
+      *addEventListener('new-citation',(e) => {...})*
+    * in lit-getword02, declaratively
+      `<csl-citation @new-citation="${(e) => {...}}">`
+  * It is unknown why the difference dispatchEvent is required.
 * [lit-getword03](https://funderburkjim.github.io/webcompLearn/lit-getword03/index.html) Adds a dictionary selection element, `csl-dict`, to the `csl-citation` and `csl-getword` elements of lit-getword02.  The `my-app` element combines
 these three elements. Both csl-dict and csl-citation generate events when
 the user changes either. And my-app listens for such changes and is
