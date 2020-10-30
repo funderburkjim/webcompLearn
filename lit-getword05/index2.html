@@ -2,7 +2,7 @@
 <html>
   <head>
     
-    <title>LitElement getword 05</title>
+    <title>LitElement csl-getword 05</title>
 <style>
 .grid-container {
   display: grid;
@@ -19,42 +19,24 @@
 }
 
 </style>
+<link rel="stylesheet" type="text/css" href="../fonts.css">
   </head>
 
   <body>
-
-  <csl-input id="input">
-  </csl-input>
-
   <div class="grid-container" >
    <div class="grid-item" >
-    <my-app id="app1"
-    input="getInput();"
+    <my-app 
     height="500px" style="position:absolute; width:400px;"
    > </my-app>
    </div>
    <div class="grid-item">
-    <my-app id="app2"
-    input="getInput();"
+    <my-app dict="mw" 
     height="500px" style="position:absolute; width:400px;"
     > </my-app>
    </div>
 
+<script></script>
   <script type="module" src="./my-app.js"></script>
-  <script type="module" src="./csl-input.js"></script>
   </body>
-<script>
-onNewInput = (e) => {
- console.log('onNewInput called',e);
-};
-let elt = document.getElementById('input');
-console.log('index.html: elt=',elt);
-elt.addEventListener('new-input',onNewInput);
-getInput = () => {
-
-
-console.log('index.html: getInput',elt);
-};
-</script>
 
 </html>

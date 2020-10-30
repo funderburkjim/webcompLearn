@@ -165,4 +165,24 @@ fetches html from the server and renders it.
   * my-app has a 'height' attribute
 * [lit-getword04/index2.html](https://funderburkjim.github.io/webcompLearn/lit-getword04/index2.html) Two copies of the my-app custom element, with
  different heights.
-
+* [lit-getword05/index.html](https://funderburkjim.github.io/webcompLearn/lit-getword05/index.html) This version is functionally same as lit-getword04
+  * csl-dict, csl-getword02, csl-input, csl-output are the same as in lit-getword04
+  * my-app has a 'suggest' attribute, which it passes down to csl-citation.
+  * csl-citation has a 'suggest' attribute.
+    * When suggest attribute has value 'no', the behavior is same as before.
+      e.g. a new-citation event is dispatched when return key pressed
+      This is the default.
+    * When suggest attribute has value 'yes':
+      * there need to be 'dict' and 'input' attribute values
+      * these are used to make an API call to getsuggest.php.
+      * Use a 'datalist' for the UI of csl-citation.  This is not as pretty as
+    the JQuery auto-suggestion UI, but functions adequately
+  * Web fonts To use web fonts (notably siddhanta.ttf for Devanagari)
+    * link to [fonts.css](https://funderburkjim.github.io/webcompLearn/fonts.css).  These have two possible sources for the fonts.
+    * [getword_styles.js](https://funderburkjim.github.io/webcompLearn/lit-getword05/getword_styles.js) provides css for the shadow dom of csl-getword02.
+      The font-face declarations are commented out, as they are 
+      non-functional in the shadow css.
+* [lit-getword05/index-suggest.html](https://funderburkjim.github.io/webcompLearn/lit-getword05/index-suggest.html)  This uses "suggest='yes'" in index.html. See above.
+* [lit-getword05/index2.html](https://funderburkjim.github.io/webcompLearn/lit-getword05/index2.html) Two independent copies of my-app element, neither
+using suggestions
+* [lit-getword05/index2-suggest.html](https://funderburkjim.github.io/webcompLearn/lit-getword05/index2-suggest.html) Two independent copies of my-app element, both using suggestions

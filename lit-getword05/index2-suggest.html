@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    
+    <title>LitElement csl-getword 05</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto;
+}
+.grid-item {
+ /*width:40%;*/
+ width:400px;
+ /*height: 500px;*/
+ /*overflow:auto;*/
+ (padding: 10px;
+ /* border: 1px solid rgba(0, 0, 0, 0.8);*/
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="../fonts.css">
+  </head>
+
+  <body>
+  <div class="grid-container" >
+   <div class="grid-item" >
+    <my-app suggest="yes"
+    height="500px" style="position:absolute; width:400px;"
+   > </my-app>
+   </div>
+   <div class="grid-item">
+    <my-app dict="mw" suggest="yes"
+    height="500px" style="position:absolute; width:400px;"
+    > </my-app>
+   </div>
+
+<script></script>
+  <script type="module" src="./my-app.js"></script>
+  </body>
+
+</html>

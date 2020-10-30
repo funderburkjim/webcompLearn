@@ -66,6 +66,7 @@ https://stackoverflow.com/questions/43352501/css-grid-content-to-use-free-space-
       appname: { type: String },
       servercode: { type: String },
       height: {type: String },
+      suggest: {type: String},
       dbg: {type: Boolean}
     };
   }
@@ -80,6 +81,7 @@ https://stackoverflow.com/questions/43352501/css-grid-content-to-use-free-space-
     this.appname = ++myApp.currentId;
     this.servercode='my-app-no-servercode';
     this.height='400px';
+    this.suggest='no'; // default
     this.dbg=false;
     if(this.dbg) {console.log('my-app. appname = ',this.appname);}
     if(this.dbg) {console.log('my-app. servercode = ',this.servercode);}
@@ -121,6 +123,7 @@ https://stackoverflow.com/questions/43352501/css-grid-content-to-use-free-space-
     <csl-citation 
      appname="${this.appname}" key="${this.key}"
      dict="${this.dict}" input="${this.input}"
+     suggest="${this.suggest}"
      @new-citation="${(e) => {this.newCitationListener(e);}}"
     ></csl-citation> 
     <!-- [my-app: ${this.dict} ${this.input}] for debugging -->
