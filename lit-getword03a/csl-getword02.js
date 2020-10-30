@@ -1,6 +1,6 @@
 import { html, css, LitElement,unsafeHTML } from '../lit-element-2.3.1.js';
 import {getwordStyles} from './getword_styles.js';
-//export {cslGetword02};
+
 class cslGetword02 extends LitElement {
   static get styles() {
    return [
@@ -15,8 +15,7 @@ class cslGetword02 extends LitElement {
       input: { type: String },
       output: { type: String },
       accent: { type: String},
-      result: { type: String },
-      servercode: { type: String }
+      result: { type: String }
     };
   }
 
@@ -28,37 +27,23 @@ class cslGetword02 extends LitElement {
     this.output = 'iast';
     this.accent = 'no';
     this.result = '... working ...';
-    // 'cologne is default or 'xampp' for local installation.
-    this.servercode = 'cologne';  
-    console.log('csl-getword02 constructor. this.servercode=',this.servercode,this.dict);
+    this.done = false;
   }
-  urlbaseF() {
-  console.log('csl-getword02. urlbaseF. servercode=',this.servercode,this.dict);
-  if (this.servercode == 'cologne') {
-   return `https://sanskrit-lexicon.uni-koeln.de/scans`;
-  }
-  if (this.servercode == 'xampp') {
-   return `http://localhost/cologne`;
-  }
-  console.log(`urlbaseF: unknown servercode =  ${this.servercode} `);
-  return `https://sanskrit-lexicon.uni-koeln.de/scans`;
- /*
+  urlbaseF = function () {
+  return css`https://sanskrit-lexicon.uni-koeln.de/scans`;
   let origin = window.location.origin;  
-  console.log('csl-getword02: urlbaseF. origin = ',origin);
   if (origin.indexOf("sanskrit-lexicon.uni-koeln.de") >= 0)  {
-   return `https://sanskrit-lexicon.uni-koeln.de/scans`;
+   return css`https://sanskrit-lexicon.uni-koeln.de/scans`;
   }else {
    //return origin + "/cologne";
-   return `http://localhost/cologne`;
+   return css`http://localhost/cologne`;
   }
-*/
  }
 
   // Don't use connectedCallback() since it can't be async
   //async firstUpdated() {
   async updated() {
   const urlbase = this.urlbaseF();
-  console.log('csl-getword02: urlbase=',urlbase);
   const url_apidev = `${urlbase}/csl-apidev`;
 
     //const baseurl = 'https://sanskrit-lexicon.uni-koeln.de/scans/csl-apidev/getword.php';
@@ -70,6 +55,7 @@ class cslGetword02 extends LitElement {
       .then(async data => {
         console.log('csl-getword02: updated result=','found'); //data);
         this.result = data;
+        //this.done = true;
       });
   }
 

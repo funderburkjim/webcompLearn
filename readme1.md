@@ -140,15 +140,16 @@ fetches html from the server and renders it.
   * It was felt that this needed to be passed to the csl-citation child
     element and also be passed back by the csl-citation custom 'new-citation'
     event and used by the my-app event handler for 'new-citation'.
-  * lit-getword03-1 does NOT use this appname, and seems to work fine.
+  * lit-getword03.1 does NOT use this appname, and seems to work fine.
     See below.
 * [lit-getword03.1/index.html](https://funderburkjim.github.io/webcompLearn/lit-getword03.1/index.html) and
   [lit-getword03.1/index2.html](https://funderburkjim.github.io/webcompLearn/lit-getword03.1/index2.html) Functionally identical to lit-getword03,
-  but does NOT use the appname attribute.  Preferable to lit-getword03 since
-  slightly simpler.
+  but my-app.js does NOT use the appname attribute.  
+  Preferable to lit-getword03 since  slightly simpler.
 * [lit-getword03a/index.html](https://funderburkjim.github.io/webcompLearn/lit-getword03a/index.html) and
   [lit-getword03a/index2.html](https://funderburkjim.github.io/webcompLearn/lit-getword03a/index2.html) Functionally similar to lit-getword03. 
-  * shorten dictionary names
+  * shorten dictionary names in csl-dict component
+  * csl-citation and csl-getword02 components same as in lit-getword02
   * add 'height' attribute to my-app element.
   * add some styling
   * [problem_child.html](https://funderburkjim.github.io/webcompLearn/lit-getword03a/problem_child.html)  Not related to web components.  For testing

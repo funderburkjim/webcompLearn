@@ -10,12 +10,15 @@ class cslCitation extends LitElement {
   static get properties() {
     return {
       key:  { type: String },
+      appname: { type: String }
     };
   }
 
   constructor() {
     super();
     this.key='';
+    this.appname='csl-citation';
+ 
   }
   onReturnKey = (event) => {
   // Number 13 is the "Enter" key on the keyboard
@@ -24,19 +27,18 @@ class cslCitation extends LitElement {
     event.preventDefault();
     this.key = event.target.value
     var new_event = new CustomEvent('new-citation',
-     {detail: {key:this.key}
+     {detail: {key:this.key,appname:this.appname}
      });
-    this.dispatchEvent(new_event);  // this. is needed. Not sure why
+    this.dispatchEvent(new_event);  // this. is required  why?
   }
  }
   render() {
     return html`
  <div class="citationdiv">
-  <!-- citation:&nbsp; -->
   <input class="keyInput" type="text" name="key" size="20" value="${this.key}" 
    style="height:2.0em"
    placeholder="Search headword"
-   @keyup=${this.onReturnKey} /> 
+   @keyup=${this.onReturnKey} />
  </div>
  `;
  }
