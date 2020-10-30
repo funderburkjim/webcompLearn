@@ -59,6 +59,5 @@ class cslOutput extends LitElement {
   }
 }
 
-if (!customElements.get('csl-output')) {
 customElements.define('csl-output', cslOutput);
-}
+

@@ -72,6 +72,9 @@ and events require a lot more 'boilerplate' complexity.
   * passing attribute value to custom element.
 * [lit-element03](https://funderburkjim.github.io/webcompLearn/lit-element03/) :  Shows how one custom element can be composed from one or more other
   custom elements.
+
+## lit-element custom elements for Sanskrit Lexicon
+
 * [lit-getword01](https://funderburkjim.github.io/webcompLearn/lit-getword01/) :  Provides a custom element which implements the getword api at
   https://sanskrit-lexicon.uni-koeln.de/ by means of
   attributes to the `<csl-getword>` element.  
@@ -186,3 +189,14 @@ fetches html from the server and renders it.
 * [lit-getword05/index2.html](https://funderburkjim.github.io/webcompLearn/lit-getword05/index2.html) Two independent copies of my-app element, neither
 using suggestions
 * [lit-getword05/index2-suggest.html](https://funderburkjim.github.io/webcompLearn/lit-getword05/index2-suggest.html) Two independent copies of my-app element, both using suggestions
+* [lit-getword05a/index.html](https://funderburkjim.github.io/webcompLearn/lit-getword05a/index.html) my-app1 custom element builds on the elements of getword05.
+  * Two instances of 'my-app', one with dictionary 'mw', and one
+    with dictionary 'mw72'. Each uses 'suggest' api.
+  * Two additional 'global' elements, whose values can filter to both
+    my-app instances
+    * csl-input:  the spelling method for citations
+    * csl-citation:  the citation.  This citation does not use suggestions,
+      since there is no dictionary specified.
+    * There are no listeners in my-app1. Changes to each of the global
+      elements generate updates in both instances of my-app.
+

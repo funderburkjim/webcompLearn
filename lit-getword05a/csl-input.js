@@ -60,8 +60,6 @@ class cslInput extends LitElement {
 }
 
 
-if (!customElements.get('csl-input')) {
 customElements.define('csl-input', cslInput);
-}
 
 

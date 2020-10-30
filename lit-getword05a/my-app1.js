@@ -1,7 +1,7 @@
 import { html, css, LitElement,unsafeHTML } from '../lit-element-2.3.1.js';
 import  './csl-input.js';
 import  './my-app.js';
-import './csl-citation1.js';
+import './csl-citation.js';
 
 class myApp1 extends LitElement {
   static get properties() {
@@ -39,22 +39,22 @@ class myApp1 extends LitElement {
    @new-input="${(e) => {this.input=e.detail.input; ;}}" 
 
   ></csl-input>
-  <csl-citation1
+  <csl-citation
    key="${this.key}" style="display:inline-block; padding-left:10px;"
-   @new-citation1="${(e) => {this.key=e.detail.key; ;}}" 
+   @new-citation="${(e) => {this.key=e.detail.key; ;}}" 
 
-  ></csl-citation1>
+  ></csl-citation>
 
   <div class="grid-container" >
    <div class="grid-item" >
-    <my-app id="app1"
+    <my-app id="app1"  suggest="yes" dict="mw"
     input="${this.input}"
     key="${this.key}"
     height="500px" style="position:absolute; width:400px;"
     > </my-app>
    </div>
    <div class="grid-item">
-    <my-app id="app2"
+    <my-app id="app2" suggest="yes" dict="mw72"
     input="${this.input}"
     key="${this.key}"
     height="500px" style="position:absolute; width:400px;"
