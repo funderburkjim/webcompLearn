@@ -125,7 +125,7 @@ https://stackoverflow.com/questions/43352501/css-grid-content-to-use-free-space-
      appname="${this.appname}" key="${this.key}"
      @new-citation="${(e) => {this.newCitationListener(e);}}"
     ></csl-citation>
-     <!--<hr style="padding-left:50px;">-->
+
  <hr style="width:95%;text-align:center;padding-right:10px;padding-left:10px">
    
    </div>

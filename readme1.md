@@ -158,4 +158,11 @@ fetches html from the server and renders it.
 * [lit-getword03a.1/index.html](https://funderburkjim.github.io/webcompLearn/lit-getword03a.1/index.html) Try to replace the 'height attribute' by
   using the style attribute of 'my-app' instance(s).  For some reason,
   this does NOT work as expected.
+* [lit-getword04/index.html](https://funderburkjim.github.io/webcompLearn/lit-getword04/index.html) add csl-input and csl-output custom elements.
+  * same as lit-getword03a: csl-dict, csl-citation
+  * new csl-input, csl-output
+  * csl-getword element has new attributes: input and output
+  * my-app has a 'height' attribute
+* [lit-getword04/index2.html](https://funderburkjim.github.io/webcompLearn/lit-getword04/index2.html) Two copies of the my-app custom element, with
+ different heights.
 

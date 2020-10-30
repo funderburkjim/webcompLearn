@@ -22,7 +22,7 @@ class cslDict extends LitElement {
 ['YAT' , 'Yates Sanskrit-English'],
 ['GST' , 'Goldstücker Sanskrit-English'],
 ['BEN' , 'Benfey Sanskrit-English'],
-['MW72' , 'Monier-Williams 11872 Sanskrit-English'],
+['MW72' , 'Monier-Williams Sanskrit-English'],
 ['AP90' , 'Apte Practical Sanskrit-English'],
 ['CAE' , 'Cappeller Sanskrit-English'],
 ['MD' , 'Macdonell Sanskrit-English'],
